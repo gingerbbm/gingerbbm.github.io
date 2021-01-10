@@ -1,0 +1,134 @@
+<!--
+
+  KNOW THE BOARD
+
+  2016.08.29    2.1    First version going up.
+  2016.08.30    2.2    Supporting 4, 5 and 7 strings.
+
+  (c) Stuart Jones, until I've had time to look into CC licenses, hosting on github, etc.
+
+  Thanks for:
+  . The original inspiration by Mike Outram http://www.mikeoutram.com/
+  . Modified version of a cog icon by Elyounssi Wahib http://elyounssi.com/
+    https://www.iconfinder.com/icons/925894/action_cog_gear_options_preferences_service_settings_icon#size=128
+  . Modified version of an info icon Linh Pham Thi Dieu http://linhpham.me/
+    https://www.iconfinder.com/icons/763457/circle_detail_help_info_information_more_stroke_icon#size=128
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Know The Board</title>
+	<script type="text/javascript" src="ktb2.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="ktb2.2.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="knowtheboard.png" />	
+</head>
+
+<body>
+
+<div id="settings_button"></div>
+<div id="info_button"></div>
+
+<div id="settings_panel" class="panel-hider">
+	<h1>SETTINGS</h1>
+	
+	<div>
+		<label for="fBPM">Beats per minute</label>
+		<span id="settings_bpm_display">&nbsp;</span>
+	</div>
+	<div>
+		<input id="fBPM" type="range" min="40" max="120" value="60"/>
+	</div>
+	
+	<div id="bps_label">
+		<p>Beats per string</p>
+		<span><input type="radio" name="fBPS" id="fBPS_1" value="1"/>&nbsp;<label for="fBPS_1">1</label></span>
+		<span><input type="radio" name="fBPS" id="fBPS_2" value="2" checked="checked"/>&nbsp;<label for="fBPS_2">2</label></span>
+		<span><input type="radio" name="fBPS" id="fBPS_4" value="4"/>&nbsp;<label for="fBPS_4">4</label></span>
+	</div>
+
+	<div id="spg_label">
+		<p>Strings on your instrument</p>
+		<span><input type="radio" name="fSPG" id="fSPG_4" value="4"/>&nbsp;<label for="fSPG_4">4</label></span>
+		<span><input type="radio" name="fSPG" id="fSPG_5" value="5"/>&nbsp;<label for="fSPG_5">5</label></span>
+		<span><input type="radio" name="fSPG" id="fSPG_6" value="6" checked="checked"/>&nbsp;<label for="fSPG_6">6</label></span>
+		<span><input type="radio" name="fSPG" id="fSPG_7" value="7"/>&nbsp;<label for="fSPG_7">7</label></span>
+	</div>
+	
+	<div id="settings_apply" class="start">APPLY</div>
+	<div id="settings_cancel" class="abort">CANCEL</div>
+</div>
+
+<div id="info_panel" class="panel-hider">
+	<h1>KTB WTF?</h1>
+	
+	<p><strong>Know The Board</strong> is an exercise aid for guitarists
+	learning the notes on the fretboard, inspired by
+	<a href="http://www.mikeoutram.com/" target="_blank">Mike Outram</a>.</p>
+
+	<p>The exercise is simply to play every note on every string from fret
+	1 to fret 12 at a speed that suits you.</p>
+
+	<p>As <strong>Know The Board</strong> gives you a note, play it on each 
+	of the strings (high to low) while the click keeps time.</p>
+
+	<p>The order of notes is randomised. Do it daily and you'll soon know the board!</p>
+
+	<p>Feedback? Tweet <a href="http://twitter.com/gingerbbm/" target="_blank">@gingerbbm</a>.</p>
+	
+	<div id="info_close" class="abort">CLOSE</div>
+</div>
+
+
+<div id="midstrip">
+
+	<p id="notelabel">KNOW THE BOARD</p>
+
+	<div>
+		<div id="notemain" class="notemain-initial">&#9834;</div>
+	</div>
+	<div>
+		<div id="notesub" class="notesub-initial">&#9834;</div>
+	</div>
+
+	<div id="notes-container">
+
+		<div id="note0"></div>
+		<div id="note1"></div>
+		<div id="note2"></div>
+		<div id="note3"></div>
+		<div id="note4"></div>
+		<div id="note5"></div>
+		<div id="note6"></div>
+		<div id="note7"></div>
+		<div id="note8"></div>
+		<div id="note9"></div>
+		<div id="note10"></div>
+		<div id="note11"></div>
+
+	</div>
+
+	<div id="strings-container">
+
+		<div id="string1"></div>
+		<div id="string2"></div>
+		<div id="string3"></div>
+		<div id="string4"></div>
+		<div id="string5"></div>
+		<div id="string6"></div>
+		<div id="string7" style="display:none"></div>
+
+	</div>
+
+	<div>
+		<div id="butt" class="start">START</div>
+	</div>
+</div>
+
+
+
+</body>
+
+</html>

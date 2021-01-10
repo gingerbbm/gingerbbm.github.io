@@ -1,0 +1,285 @@
+/*
+
+  KNOW THE BOARD
+
+  2016.08.29    2.1    First version going up.
+  2016.08.30    2.2    Supporting 4, 5 and 7 strings.
+
+  (c) Stuart Jones, until I've had time to look into CC licenses, hosting on github, etc.
+
+ */
+
+a:link, a:visited, a:hover, a:active {
+	color:blue;
+	text-decoration:none;
+
+}
+
+#settings_button {
+	cursor:pointer;
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:38px;
+	height:38px;
+	background-image:url(cog.svg);
+}
+
+#info_button {
+	cursor:pointer;
+	position:absolute;
+	top:58px;
+	right:10px;
+	width:38px;
+	height:38px;
+	background-image:url(info.svg);
+}
+
+/*
+ * SETTINGS -------------------------------------------------------------------
+ */
+#settings_panel, #info_panel {
+	font-family:arial, sans-serif;
+	font-size:13px;
+	color:#333;
+
+	position:absolute;
+	left:0;
+	right:0;
+	top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	z-index:5;
+
+	width:208px;
+	padding:10px;
+
+	
+	border:2px solid grey;
+	background-color:#eee;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#settings_panel h1, #info_panel h1 {
+	font-size:16px;
+	text-align:center;
+	margin-top:0;
+	padding-top:20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #ccc;
+}
+
+#fBPM {
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#bps_label {
+	margin-top:0;
+	border-top:1px solid #ccc;
+	padding-bottom:10px;
+	border-bottom:1px solid #ccc;
+}
+
+#bps_label span {
+	text-align:center;
+	background-color:#f4f4f4;
+	padding:5px;
+	border-radius:5px;
+	width:27%;
+	display:inline-block;
+}
+
+#spg_label span {
+	text-align:center;
+	background-color:#f4f4f4;
+	padding:5px;
+	border-radius:5px;
+	width:18%;
+	display:inline-block;
+}
+
+#bps_label label {
+	display:inline-block;
+	width:inherit;
+
+}
+
+#settings_apply, #settings_cancel, #info_close {
+	cursor:pointer;
+	text-align:center;
+	font-family:arial; 
+	margin-top:10px;
+}
+
+#settings_apply {
+	font-size:20px;
+	padding:10px;
+	height:2em;
+	line-height:2em;
+}
+
+#settings_cancel, #info_close {
+	font-size:16px;
+	padding:10px;
+	height:1.6em;
+	line-height:1.6em;
+}
+.panel-hider {
+	visibility: hidden;
+}
+
+.panel-revealer {
+	visibility: visible;
+}
+
+#settings_bpm_display {
+	float:right;
+	text-align:right;
+}
+
+#info_panel p {
+	font-size:13px;
+
+}
+
+/*
+ * MAIN CONTENT ---------------------------------------------------------------
+ */
+
+#midstrip {
+	text-align:center;
+	padding:0;
+}
+
+#notelabel {
+  color:grey;
+  font-family:arial, sans-serif; 
+  margin-top:40px;
+}
+
+#notemain {
+  display:inline-block;
+  width:208px;
+  height:170px;
+  line-height:170px;
+  /*border:2px solid #ccc;*/
+  text-align:center;
+  font-family:arial;  
+  font-size:140px;  
+}
+
+.notemain-initial {
+  background-color:transparent;
+  color:#333;
+}
+
+
+#notesub {
+  display: inline-block;
+  width:208px;
+  height:60px;
+  line-height:60px;
+  /*border:2px solid #ccc;*/
+  text-align:center;
+  font-family:arial;
+  font-size:40px;
+}
+
+.notesub-initial {
+  background-color:#eee;
+  color:#ccc;
+}
+
+.go {
+  color:#eee;
+  background-color: green;
+}
+
+
+
+
+
+#notes-container {
+  margin-top:10px;
+}
+
+#notes-container div {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 12px;
+  width: 12px;
+  border: 2px solid green;
+  margin-right:1px;
+  margin-left:1px;
+}
+
+.note-fill {
+  background-color: green;
+}
+
+#strings-container {
+  margin-top:20px;
+}
+
+#strings-container div {
+  display: inline-block;
+  box-sizing: border-box; 
+  height: 12px;
+  width: 30px;
+  border: 2px solid blue;
+  margin-right:1px;
+  margin-left:1px;
+}
+
+.string-fill {
+  background-color: blue;
+}
+
+.string-hider {
+	width:200px;
+	border-color:red;
+}
+
+
+#butt {
+	display:inline-block;
+	cursor:pointer;
+	font-family:arial; 
+	font-size:20px;
+	margin-top:40px;
+	padding:10px;
+	width:208px;
+	height:2em;
+	line-height:2em;
+}
+.start {
+	background-color: blue;
+	color:#fff;
+}
+.abort {
+	background-color: #ccc;
+	color:#333;
+}
+.disable {
+	background-color: #ccc;
+	color:#eee;
+}
+
+
+/*
+ * NARROW SCREENS -------------------------------------------------------------
+ */
+@media (max-width: 480px) {
+	#butt {
+		display: block;
+		width:auto;
+	}
+	#info_button {
+		top:10px;
+		left:10px;	
+	}
+}
+
+
